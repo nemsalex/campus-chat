@@ -1,0 +1,17 @@
+.back-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: calc(var(--space-2) * -1) calc(var(--space-2) * -1) var(--space-4);
+}
+
+.back-header-title {
+  flex: 1;
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.back-header-action {
+  flex-shrink: 0;
+}

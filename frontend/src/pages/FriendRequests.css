@@ -1,0 +1,26 @@
+.friend-request-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.friend-request-user {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-base);
+  min-width: 0;
+}
+
+.friend-request-actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.friend-request-actions .btn {
+  padding: 0.5rem 0.7rem;
+  font-size: var(--text-sm);
+}

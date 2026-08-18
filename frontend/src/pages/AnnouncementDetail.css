@@ -1,0 +1,28 @@
+.announcement-detail h2 {
+  font-size: var(--text-lg);
+  font-weight: 800;
+  margin: var(--space-1) 0;
+}
+
+.announcement-urgent-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--color-alert);
+  font-weight: 700;
+  font-size: var(--text-xs);
+  margin-bottom: var(--space-1);
+}
+
+.announcement-detail-content {
+  font-size: var(--text-base);
+  line-height: 1.5;
+  margin: var(--space-3) 0;
+}
+
+.announcement-detail-file {
+  display: inline-flex;
+  margin-bottom: var(--space-4);
+  background: var(--color-surface-alt);
+  color: var(--color-text);
+}

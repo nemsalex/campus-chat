@@ -1,0 +1,70 @@
+.conversation-error {
+  margin: var(--space-2) var(--space-4) 0;
+}
+
+.conversation-search-toggle {
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+
+.conversation-search-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.conversation-search-bar input {
+  flex: 1;
+  padding: 0.5rem 0.85rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  outline: none;
+  background: var(--color-surface-alt);
+}
+
+.conversation-search-bar input:focus {
+  border-color: var(--color-secondary);
+}
+
+.conversation-search-count {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.conversation-request-banner {
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.conversation-request-banner p {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-3);
+}
+
+.conversation-request-actions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.conversation-request-actions .btn {
+  flex: 1;
+}
+
+.conversation-pending-note {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  text-align: center;
+  background: var(--color-surface);
+  flex-shrink: 0;
+}

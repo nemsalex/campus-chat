@@ -1,0 +1,25 @@
+.search-results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.search-result-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: var(--space-3);
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, transform 0.05s ease;
+}
+
+.search-result-row:active {
+  transform: scale(0.99);
+}
+
+.search-result-row p {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}

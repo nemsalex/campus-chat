@@ -1,0 +1,87 @@
+.notification-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-3) var(--space-2);
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.notification-row:hover,
+.notification-row:active {
+  background: var(--color-surface-alt);
+}
+
+.notification-row.unread {
+  background: var(--color-primary-soft);
+}
+
+.notification-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.notification-icon-friend_request,
+.notification-icon-friend_accepted {
+  background: var(--color-secondary-soft);
+  color: var(--color-secondary);
+}
+
+.notification-icon-announcement,
+.notification-icon-leave_request {
+  background: var(--color-notification-soft);
+  color: var(--color-notification);
+}
+
+.notification-icon-status {
+  background: var(--color-online-soft);
+  color: var(--color-online);
+}
+
+.notification-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.notification-message {
+  font-size: var(--text-base);
+  color: var(--color-text);
+}
+
+.notification-time {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.notifications-mark-all {
+  background: none;
+  border: none;
+  color: var(--color-secondary);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  padding: var(--space-1) var(--space-2);
+}
+
+.notification-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  flex-shrink: 0;
+}

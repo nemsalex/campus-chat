@@ -1,0 +1,20 @@
+# Python / Django
+backend/venv/
+__pycache__/
+*.py[cod]
+backend/db.sqlite3
+backend/media/
+backend/.env
+
+# Node / Vite
+frontend/node_modules/
+frontend/dist/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Claude Code local project files
+.claude/

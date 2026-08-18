@@ -1,0 +1,34 @@
+.friend-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.friend-row-user {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex: 1;
+  min-width: 0;
+}
+
+.friend-row-user p {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.friend-row-message {
+  padding: var(--space-2);
+  color: var(--color-primary);
+  border-radius: 50%;
+  transition: background-color 0.15s ease;
+}
+
+.friend-row-message:hover,
+.friend-row-message:active {
+  background: var(--color-primary-soft);
+}

@@ -1,0 +1,129 @@
+.messages-list-page {
+  padding-bottom: var(--space-2);
+}
+
+.page-title {
+  padding: var(--space-4) var(--space-4) var(--space-2);
+  font-size: var(--text-lg);
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.messages-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-4);
+}
+
+.messages-list-header .page-title {
+  padding: var(--space-4) 0 var(--space-2);
+}
+
+.messages-new-btn {
+  color: var(--color-primary);
+}
+
+.message-request-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.message-request-link {
+  flex: 1;
+  min-width: 0;
+  border-bottom: none;
+  padding-right: 0;
+}
+
+.message-request-actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-shrink: 0;
+  padding-right: var(--space-4);
+}
+
+.message-request-actions .btn {
+  padding: 0.5rem 0.7rem;
+}
+
+.conversation-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color 0.15s ease;
+}
+
+.conversation-row:hover,
+.conversation-row:active {
+  background: var(--color-surface-alt);
+}
+
+.conversation-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.conversation-top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.conversation-info p {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.conversation-preview {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.conversation-read-icon {
+  flex-shrink: 0;
+  color: var(--color-text-secondary);
+}
+
+.conversation-read-icon.seen {
+  color: var(--color-secondary);
+}
+
+.conversation-preview-text {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.conversation-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.conversation-meta-time {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.conversation-meta-badge {
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: var(--radius-full);
+  background: var(--color-online);
+  color: white;
+  font-size: 0.68rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

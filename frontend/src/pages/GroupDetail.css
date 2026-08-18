@@ -1,0 +1,232 @@
+.group-detail-header {
+  margin-bottom: var(--space-2);
+}
+
+.group-detail-header h2 {
+  font-size: var(--text-lg);
+  font-weight: 800;
+}
+
+.group-detail-description {
+  font-size: var(--text-base);
+  margin: var(--space-3) 0 var(--space-4);
+}
+
+.group-detail-scroll {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.group-chat-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.group-chat-author {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  margin-bottom: 2px;
+}
+
+.group-member-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  font-size: var(--text-base);
+}
+
+.group-member-row + .group-member-row {
+  border-top: 1px solid var(--color-border);
+}
+
+.group-member-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex: 1;
+  min-width: 0;
+}
+
+.group-admin-badge {
+  color: var(--color-notification);
+  flex-shrink: 0;
+}
+
+.group-member-actions {
+  display: flex;
+  gap: var(--space-1);
+  flex-shrink: 0;
+}
+
+.group-member-actions .icon-btn {
+  color: var(--color-text-secondary);
+  width: 28px;
+  height: 28px;
+}
+
+.group-leave-pending {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  text-align: center;
+  padding: var(--space-2);
+}
+
+.announcement-link {
+  display: block;
+}
+
+.timetable-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-2) 0;
+  font-size: var(--text-sm);
+}
+
+.timetable-row + .timetable-row {
+  border-top: 1px solid var(--color-border);
+}
+
+.timetable-row span {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
+
+.poll-card {
+  align-self: center;
+  width: 100%;
+  max-width: 88%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.poll-question {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-weight: 700;
+  font-size: var(--text-base);
+  color: var(--color-secondary);
+}
+
+.poll-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-alt);
+  overflow: hidden;
+  cursor: pointer;
+  font-size: var(--text-sm);
+  text-align: left;
+}
+
+.poll-option:disabled {
+  cursor: default;
+}
+
+.poll-option.mine {
+  border-color: var(--color-secondary);
+}
+
+.poll-option-fill {
+  position: absolute;
+  inset: 0;
+  background: var(--color-secondary-soft);
+  z-index: 0;
+  transition: width 0.2s ease;
+}
+
+.poll-option-label,
+.poll-option-pct {
+  position: relative;
+  z-index: 1;
+}
+
+.poll-option-pct {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.poll-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.poll-close-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  color: var(--color-alert);
+  cursor: pointer;
+  font-size: var(--text-xs);
+}
+
+.poll-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.poll-form input[type='text'] {
+  padding: 0.6rem 0.85rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-base);
+  outline: none;
+  background: var(--color-surface-alt);
+}
+
+.poll-form-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.poll-form-option input {
+  flex: 1;
+}
+
+.poll-form-add {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: var(--color-secondary);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.poll-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+}

@@ -1,0 +1,70 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('search/', views.SearchUsersView.as_view()),
+    path('suggestions/', views.SuggestionsView.as_view()),
+    path('class-directory/', views.ClassDirectoryView.as_view()),
+    path('users/<int:pk>/', views.UserProfileView.as_view()),
+
+    path('friends/', views.FriendsListView.as_view()),
+    path('friends/requests/', views.FriendRequestListCreateView.as_view()),
+    path('friends/requests/<int:pk>/accept/', views.FriendRequestAcceptView.as_view()),
+    path('friends/requests/<int:pk>/refuse/', views.FriendRequestRefuseView.as_view()),
+    path('friends/requests/<int:pk>/cancel/', views.FriendRequestCancelView.as_view()),
+    path('friends/<int:pk>/remove/', views.FriendRemoveView.as_view()),
+    path('block/', views.BlockUserView.as_view()),
+    path('unblock/', views.UnblockUserView.as_view()),
+    path('blocked/', views.BlockedUsersListView.as_view()),
+    path('creator/blocked-by/', views.CreatorBlockedByListView.as_view()),
+    path('creator/force-unblock/', views.CreatorForceUnblockView.as_view()),
+    path('report/', views.ReportUserView.as_view()),
+    path('reports/', views.ReportListView.as_view()),
+    path('reports/<int:pk>/resolve/', views.ReportResolveView.as_view()),
+    path('reports/<int:pk>/dismiss/', views.ReportDismissView.as_view()),
+    path('reports/<int:pk>/suspend/', views.ReportSuspendView.as_view()),
+
+    path('statuses/', views.StatusListCreateView.as_view()),
+    path('statuses/feed/', views.StatusFeedView.as_view()),
+    path('statuses/<int:pk>/view/', views.StatusViewCreateView.as_view()),
+    path('statuses/<int:pk>/viewers/', views.StatusViewersListView.as_view()),
+
+    path('announcements/', views.AnnouncementListView.as_view()),
+    path('announcements/<int:pk>/', views.AnnouncementDetailView.as_view()),
+    path('events/', views.EventListView.as_view()),
+
+    path('groups/', views.GroupListCreateView.as_view()),
+    path('groups/mine/', views.MyGroupsView.as_view()),
+    path('groups/<int:pk>/', views.GroupDetailView.as_view()),
+    path('groups/<int:pk>/join/', views.GroupJoinView.as_view()),
+    path('groups/<int:pk>/leave/', views.GroupLeaveView.as_view()),
+    path('groups/<int:pk>/leave-requests/', views.GroupLeaveRequestsView.as_view()),
+    path('groups/<int:pk>/leave-requests/<int:user_id>/confirm/', views.GroupLeaveRequestConfirmView.as_view()),
+    path('groups/<int:pk>/leave-requests/<int:user_id>/cancel/', views.GroupLeaveRequestCancelView.as_view()),
+    path('groups/<int:pk>/members/<int:user_id>/promote/', views.GroupPromoteView.as_view()),
+    path('groups/<int:pk>/members/<int:user_id>/demote/', views.GroupDemoteView.as_view()),
+    path('groups/<int:pk>/members/<int:user_id>/remove/', views.GroupRemoveMemberView.as_view()),
+    path('groups/<int:pk>/announcements/', views.GroupAnnouncementsView.as_view()),
+    path('groups/<int:pk>/polls/', views.GroupPollsView.as_view()),
+    path('polls/<int:pk>/vote/', views.PollVoteView.as_view()),
+    path('polls/<int:pk>/close/', views.PollCloseView.as_view()),
+
+    path('niveau-groups/list/', views.NiveauListView.as_view()),
+    path('niveau-groups/assign-chief/', views.AssignClassChiefView.as_view()),
+    path('niveau-groups/remove-chief/', views.RemoveClassChiefView.as_view()),
+    path('niveau-groups/chiefs/', views.ClassChiefsListView.as_view()),
+    path('niveau-groups/students/', views.NiveauStudentsView.as_view()),
+
+    path('timetable/', views.TimetableListCreateView.as_view()),
+    path('timetable/<int:pk>/', views.TimetableDeleteView.as_view()),
+
+    path('push/vapid-key/', views.PushVapidKeyView.as_view()),
+    path('push/subscribe/', views.PushSubscribeView.as_view()),
+    path('push/unsubscribe/', views.PushUnsubscribeView.as_view()),
+
+    path('notifications/', views.NotificationListView.as_view()),
+    path('notifications/unread-count/', views.NotificationUnreadCountView.as_view()),
+    path('notifications/mark-read-by-type/', views.NotificationMarkReadByTypeView.as_view()),
+    path('notifications/mark-all-read/', views.NotificationMarkAllReadView.as_view()),
+    path('notifications/<int:pk>/read/', views.NotificationMarkReadView.as_view()),
+]
