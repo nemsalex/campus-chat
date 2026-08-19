@@ -1,0 +1,16 @@
+backend/venv/
+backend/__pycache__/
+**/__pycache__/
+backend/.env
+backend/db.sqlite3
+backend/media/
+backend/frontend_dist/
+backend/staticfiles/
+
+frontend/node_modules/
+frontend/dist/
+
+.git/
+.claude/
+.vscode/
+.idea/

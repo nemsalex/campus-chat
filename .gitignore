@@ -10,6 +10,10 @@ backend/.env
 frontend/node_modules/
 frontend/dist/
 
+# Build artifacts copied in at Docker build time
+backend/frontend_dist/
+backend/staticfiles/
+
 # Editor / OS
 .vscode/
 .idea/
