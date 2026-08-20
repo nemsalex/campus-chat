@@ -1,15 +1,30 @@
 import { useEffect, useState } from 'react'
 import { Outlet, Link, useLocation } from 'react-router-dom'
 import { GraduationCap, Search, UserPlus, Bell } from 'lucide-react'
+import { useAuth } from '../context/AuthContext'
 import { apiJson } from '../api/client'
 import BottomNav from './BottomNav'
+import Onboarding from '../components/Onboarding'
 import './AppShell.css'
 
 function AppShell() {
   const location = useLocation()
+  const { user } = useAuth()
   const [pendingCount, setPendingCount] = useState(0)
   const [unreadCount, setUnreadCount] = useState(0)
   const [navCounts, setNavCounts] = useState({ status: 0, message: 0, campus: 0 })
+  const [showOnboarding, setShowOnboarding] = useState(false)
+
+  useEffect(() => {
+    if (user && !localStorage.getItem(`onboarding_seen_${user.matricule}`)) {
+      setShowOnboarding(true)
+    }
+  }, [user])
+
+  const dismissOnboarding = () => {
+    if (user) localStorage.setItem(`onboarding_seen_${user.matricule}`, '1')
+    setShowOnboarding(false)
+  }
 
   useEffect(() => {
     apiJson('/api/social/friends/requests/')
@@ -55,6 +70,8 @@ function AppShell() {
       </main>
 
       <BottomNav counts={navCounts} />
+
+      {showOnboarding && <Onboarding onClose={dismissOnboarding} />}
     </div>
   )
 }
